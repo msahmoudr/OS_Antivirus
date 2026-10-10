@@ -1,7 +1,10 @@
 !/bin/bash
 
 
-
+if [ $# -ne 3 ]; then
+    echo "Usage: $0 dir malicious_dir interval-secs"
+    exit 1
+fi
 DIR=$1
 MALICIOUS_DIR=$2
 INTERVAL=$3
