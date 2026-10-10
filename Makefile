@@ -1,4 +1,3 @@
-
 DIR = test_dir
 MALICIOUS_DIR = malicious_dir
 INTERVAL = 5
@@ -10,9 +9,6 @@ all: prebuild
 
 restore: prebuild
 	./restore.sh $(DIR) $(MALICIOUS_DIR)
+
 prebuild:
 	mkdir -p $(MALICIOUS_DIR)
-
-
-clean:
-	rm -rf $(MALICIOUS_DIR) directory-info.last directory-info.new
